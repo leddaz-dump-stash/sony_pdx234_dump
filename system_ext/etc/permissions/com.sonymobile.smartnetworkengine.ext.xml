@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Copyright 2020 Sony Corporation
+-->
+<!--
+   This file summarizes what should be described in privapp-permissions for management purpose,
+   and is not deployed to the device. In practice, the automatically generated
+   privapp-permissions-system-ext.xml is used.
+-->
+<permissions>
+    <privapp-permissions package="com.sonymobile.smartnetworkengine.ext">
+        <permission name="android.permission.READ_PRECISE_PHONE_STATE" />
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+        <permission name="android.permission.WRITE_APN_SETTINGS" />
+    </privapp-permissions>
+</permissions>
