@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <feature name="com.google.ambient.streaming" />
+    <!-- Allow background operation in battery saver mode for Cross Device-->
+    <allow-in-power-save package="com.google.ambient.streaming" />
+</config>

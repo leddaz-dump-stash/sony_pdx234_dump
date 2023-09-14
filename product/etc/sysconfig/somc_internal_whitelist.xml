@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2022 Sony Corporation
+-->
+
+<config>
+    <!-- These are the standard packages that are white-listed to always have internet
+          access while in power save mode, even if they aren't in the foreground.
+
+         An example of white-listed is following:
+
+         <allow-in-power-save package="com.example.a" />
+          - The packages that are white-listed to be able to run in the
+            background while in power save mode.
+          - The packages that are white-listed to be exempted from Background service
+            restriction after Android O.
+
+         <allow-in-power-save-except-idle package="com.example.b" />
+          - The packages that are white-listed to be able to run in the
+            background while in power save mode.
+            (but not whitelisted from device idle modes)
+    -->
+
+    <!--  JIML-395955  -->
+    <allow-in-power-save package="com.facebook.services" />
+    <allow-in-power-save-except-idle package="com.facebook.appmanager" />
+
+    <!--  JIML-241815  -->
+    <allow-in-power-save package="com.felicanetworks.mfc"/>
+    <allow-in-power-save package="com.felicanetworks.mfm.main"/>
+
+    <!--  RID013050 JIML-393686  -->
+    <allow-in-power-save package="com.sony.uelog.service" />
+
+    <!--  JIML-378716  -->
+    <allow-in-power-save package="com.sonyericsson.updatecenter" />
+
+    <!--  JIML-172405  -->
+    <allow-in-power-save package="com.sonyericsson.soundenhancement" />
+
+    <!--  JIML-81141   -->
+    <allow-in-power-save package="com.sonymobile.intelligent.backlight" />
+
+    <!--  MSG-4592   -->
+    <allow-in-power-save package="com.sonyericsson.wappush" />
+
+    <!--  JIML-117366   -->
+    <allow-in-power-save package="com.sonymobile.xperiaservices" />
+
+    <!--  JIML-128236   -->
+    <allow-in-power-save package="com.sonymobile.gameenhancer.browser" />
+
+    <!--  UPC-1993 JIML-80121   -->
+    <allow-in-power-save-except-idle package="com.sonymobile.xperiasystemserver" />
+
+    <!--  FOTAUA-892  -->
+    <allow-in-power-save package="com.sonymobile.gotaidd.service" />
+
+    <!--  JIML-86046   -->
+    <allow-in-power-save package="com.sonymobile.appprediction" />
+
+    <!--  SYSTEM-3955 JIML-312572   -->
+    <allow-in-power-save package="com.sonymobile.wirelesschargemanager" />
+
+    <!--  FOTADA-854  -->
+    <allow-in-power-save package="com.android.omadm.service" />
+    <allow-in-power-save package="com.android.sdm.plugins.connmo" />
+
+    <!--  JIML-384556   -->
+    <allow-in-power-save package="jp.co.sony.mc.ethernettetheringux" />
+
+    <!--  RID009403 JIML-405523   -->
+    <allow-in-power-save package="com.sonymobile.dualdrive" />
+
+    <!--  JIML-411543   -->
+    <allow-in-power-save package="com.sonymobile.superstamina" />
+</config>

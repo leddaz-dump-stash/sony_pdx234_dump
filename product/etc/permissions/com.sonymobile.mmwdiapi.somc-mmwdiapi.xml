@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2020, 2021, 2022 Sony Corporation
+-->
+
+<permissions>
+    <library name="com.sonymobile.mmwdiapi"
+        file="/product/framework/somc-ext-mmwdiapi.jar"/>
+</permissions>

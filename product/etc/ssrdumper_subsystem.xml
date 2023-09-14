@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2018, 2022 Sony Corporation
+-->
+<ramdump_ssr>
+	<!-- Please consult Ramdump Dev team before adding any extra information-->
+	<!-- subsystem-> Specify the subsystem information.
+		syntax:
+			<subsystem>
+				<name>AAAA</name>
+				<log_path>BBBB</log_path>
+				<log_event>CCCC</log_event>
+			</subsystem>
+
+		name: Vendor subsystem name.
+			subsystems names shall be given as per chipset vendor
+			for a particular platform.
+			For an instance SM8550(Qualcomm) refer subsystem dump names
+			in "/data/vendor/ramdump".
+
+		log_path: Crash reason path for respective subsystem.
+			usually path shall be in "/sys/devices/platform/soc/xxx" for
+			each subsystem.
+
+		log_event: Input pollfd event for a subsystem.
+			By default log_event is POLLPRI, if any subsystem requires
+			POLLIN as input event add log_event field in subsytem node.
+ 			Typically for /dev node poll event input should be POLLIN
+			For sysfs entry poll event should be POLLPRI.
+        -->
+	<subsystem>
+		<name>remoteproc-adsp</name>
+		<log_path>/sys/devices/platform/soc/3000000.remoteproc-adsp/crash_reason</log_path>
+	</subsystem>
+	<subsystem>
+		<name>remoteproc-mss</name>
+		<log_path>/sys/devices/platform/soc/4080000.remoteproc-mss/crash_reason</log_path>
+	</subsystem>
+	<subsystem>
+		<name>qcom,vidc</name>
+		<log_path>/sys/devices/platform/soc/aa00000.qcom,vidc/crash_reason</log_path>
+	</subsystem>
+	<subsystem>
+		<name>remoteproc-slpi</name>
+		<log_path>/sys/devices/platform/soc/2400000.remoteproc-slpi/crash_reason</log_path>
+	</subsystem>
+	<subsystem>
+		<name>remoteproc-cdsp</name>
+		<log_path>/sys/devices/platform/soc/32300000.remoteproc-cdsp/crash_reason</log_path>
+	</subsystem>
+	<subsystem>
+		<name>qcom,cnss-qca-converged</name>
+		<log_path>/sys/kernel/cnss/crash_reason</log_path>
+	</subsystem>
+	<subsystem>
+		<name>wcnss</name>
+	</subsystem>
+	<subsystem>
+		<name>ramdump_smem</name>
+	</subsystem>
+	<subsystem>
+		<name>ramdump_wcss_msa0</name>
+	</subsystem>
+	<subsystem >
+		<name>wlan_pdr</name>
+	</subsystem>
+	<subsystem >
+		<name>esoc0</name>
+	</subsystem>
+	<subsystem >
+		<name>evass</name>
+	</subsystem>
+</ramdump_ssr>
