@@ -1,0 +1,4 @@
+service vendor.aidlcharger-somc /vendor/bin/hw/vendor.semc.hardware.aidlcharger-service.somc
+    class hal
+    user oem_2995
+    group system root oem_2993

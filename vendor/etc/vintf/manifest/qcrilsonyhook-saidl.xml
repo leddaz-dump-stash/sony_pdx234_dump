@@ -1,0 +1,8 @@
+<manifest version="1.0" type="device">
+    <hal format="aidl">
+        <name>vendor.somc.hardware.aidlradio</name>
+        <version>1</version>
+        <fqname>ISomcHook/somchook0</fqname>
+        <fqname>ISomcHook/somchook1</fqname>
+    </hal>
+</manifest>

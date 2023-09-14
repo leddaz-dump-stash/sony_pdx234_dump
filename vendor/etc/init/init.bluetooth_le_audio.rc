@@ -1,0 +1,8 @@
+on boot
+    # Set property to enable broadcast for T-yodo
+    # ADV_AUDIO_UNICAST_FEAT_MASK: 0x01
+    # ADV_AUDIO_BCA_FEAT_MASK: 0x02
+    # ADV_AUDIO_BCS_FEAT_MASK: 0x04
+    setprop persist.vendor.service.bt.adv_audio_mask 7
+    # Set property to enable in-band ringtone
+    setprop persist.bluetooth.lea.disableinbandringing false

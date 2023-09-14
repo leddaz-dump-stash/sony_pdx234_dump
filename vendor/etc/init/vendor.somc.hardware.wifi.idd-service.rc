@@ -1,0 +1,5 @@
+service somc_wifi_idd_hal_service /vendor/bin/hw/vendor.somc.hardware.wifi.idd-service
+    interface aidl vendor.somc.hardware.wifi.idd.ISomcWifiIdd/default
+    class hal
+    user wifi
+    group wifi

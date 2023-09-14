@@ -1,0 +1,9 @@
+on init
+    start mmc_checker
+
+service mmc_checker /vendor/bin/mmc_checker
+    user root
+    group root
+    seclabel u:r:mmc_checker:s0
+    disabled
+    oneshot

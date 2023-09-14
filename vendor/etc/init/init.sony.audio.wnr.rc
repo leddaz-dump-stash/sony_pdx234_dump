@@ -1,0 +1,2 @@
+on boot
+    rm /data/vendor/audio/GpuKernelRepo.pb

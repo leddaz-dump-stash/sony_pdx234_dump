@@ -1,0 +1,25 @@
+################################################################################
+#
+# Copyright 2022 Sony Corporation
+#
+# usb_hub_ctrl.rc
+#
+# /vendor/bin/usb_hub_ctrl <busno> <devno> <portn>
+#
+# Yodo-PF:
+#  Port(busno=1, devno=1, portn=1) is connected to SONY GamingGear
+#  xhci/usb1 autosuspend must be disabled with GamingGear
+
+#----------------------------------------------------------
+# usb port1 power off
+#----------------------------------------------------------
+on property:vendor.usb.usb_hub_ctrl=setsus
+    exec u:r:su:s0 -- /system/bin/ifconfig eth0 down
+    write /sys/bus/usb/devices/usb1/power/autosuspend_delay_ms -1
+    exec -- /vendor/bin/usb_hub_ctrl 1 1 1 poff
+
+#----------------------------------------------------------
+# usb port1 power on
+#----------------------------------------------------------
+on property:vendor.usb.usb_hub_ctrl=clrsus
+    exec -- /vendor/bin/usb_hub_ctrl 1 1 1 pon
